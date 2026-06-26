@@ -1,0 +1,7 @@
+User Story 4:
+As a student, I want to view my generated timetable or receive an error prompt if there is a conflict so that I can confirm my schedule or resolve registration failures.
+Acceptance Criteria:
+1.The system displays a completed weekly timetable grid if all selected courses have no scheduling conflicts.
+2.Each course in the visual timetable displays the course name, time slot, and professor name.
+3.The system rejects the layout generation and flags the conflicting courses if any selected courses overlap in time.
+4.The system displays an explicit error message explaining that the generation failed due to a schedule conflict.
