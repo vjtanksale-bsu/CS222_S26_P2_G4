@@ -1,41 +1,34 @@
 # CS222_S26_P2_G4
-# Course Scheduling System
+# Feature: Available Course Display (User Story 2)
 
-## Overview
+## Description
 
-This project is a course scheduling system developed for CS222 Project 2.
-
-The program allows students to:
-- View all available course numbers.
-- Enter the number of courses they want to register for.
-- Select course numbers.
-- Generate a valid semester schedule or report that no schedule can be found.
-
-The project is implemented in Python using Test-Driven Development (TDD) and Clean Code principles.
+As a student,  
+I want to view all available course numbers,  
+So that I can decide which courses I want to register for.
 
 ---
 
-## Authors
+## Acceptance Criteria & Implementation Plan
 
-- Xuancen Liu
-- Qijun Ma
-- Haozhi Xue
+We will implement this feature following TDD principles.
 
----
+### 1. Display Offered Courses
 
-## Project Structure
+- **Criteria:** The system displays all offered course numbers.
+- **TDD Target:** Test that all available course numbers are returned or displayed.
 
-src/
-tests/
-README.md
+### 2. Display Before Course Selection
 
----
+- **Criteria:** The list is shown before course selection begins.
+- **TDD Target:** Test that available courses can be retrieved before user course input.
 
-## Development
+### 3. Unique Course Numbers
 
-The project follows:
-- Test-Driven Development (TDD)
-- Clean Code principles
-- GitHub branching workflow
+- **Criteria:** Each course number appears only once.
+- **TDD Target:** Test that duplicate course numbers are removed from the displayed list.
 
-Each user story is developed on its own GitHub branch before being merged into the main branch.
+### 4. Review Before Selection
+
+- **Criteria:** The user can review the list before entering course selections.
+- **TDD Target:** Test that the course list is accessible before selected courses are submitted.
