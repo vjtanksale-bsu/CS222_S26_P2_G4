@@ -1,5 +1,3 @@
-# CS222_S26_P2_G4 - Branch: user-story-4
-
 ## User Story 4: Timetable Generation & Conflict Handling
 
 ### Description
