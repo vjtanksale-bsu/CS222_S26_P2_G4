@@ -3,11 +3,8 @@
 ## User Story 4: Timetable Generation & Conflict Handling
 
 ### Description
-> **As a student,** > I want to view my generated timetable or receive an error prompt if there is a conflict  
-> **so that** I can confirm my schedule or resolve registration failures.
-
----
-
+**As a student,** > I want to view my generated timetable or receive an error prompt if there is a conflict  
+**so that** I can confirm my schedule or resolve registration failures.
 ## Acceptance Criteria
 
 1. **Visual Timetable Grid**
@@ -21,9 +18,6 @@
 
 4. **Explicit Error Prompting**
    - The system displays an explicit, user-friendly error message explaining that the generation failed due to a schedule conflict.
-
----
-
 ## Technical Implementation Overview (TDD & Clean Code)
 
 - **Test-Driven Development (TDD):** Implementation follows strict Red-Green-Refactor cycles. Core conflict boundaries (partial overlap, identical slots, back-to-back checking) are completely covered by automated test cases.
