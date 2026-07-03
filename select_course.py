@@ -14,7 +14,7 @@ def load_courses(filename):
 def course_exists(course_number, courses):
     return course_number in courses
 
-def select_course(course_number, courses, selected):
+def select_course(course_number, courses, selected, required_courses=None):
 
     if course_number not in courses:
         return False
