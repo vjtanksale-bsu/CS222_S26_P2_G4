@@ -5,7 +5,7 @@ from select_course import load_courses
 class TestCourseSelection(unittest.TestCase):
 
     def test_load_courses(self):
-        courses = load_courses("course.txt")
+        courses = load_courses("courses.txt")
 
         self.assertIn("CS222", courses)
         self.assertIn("MATH166", courses)
