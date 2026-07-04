@@ -1,23 +1,24 @@
 import unittest
-from course_count import validate_course_count
+from course_reader import CourseReader
 
 
-class TestCourseCount(unittest.TestCase):
+class TestCourseReader(unittest.TestCase):
 
-    def test_valid_course_count(self):
-        self.assertEqual(validate_course_count("3"), 3)
+    def test_get_available_course_numbers(self):
 
-    def test_invalid_non_number_input(self):
-        with self.assertRaises(ValueError):
-            validate_course_count("abc")
+        # Create a small test course file.
+        with open("test_courses.txt", "w") as file:
+            file.write("CS120 001 MWF 0900 0950\n")
+            file.write("CS120 003 TR 0930 1045\n")
+            file.write("CS121 001 TR 1230 1345\n")
+            file.write("CS222 005 TR 1100 1215\n")
 
-    def test_invalid_zero_input(self):
-        with self.assertRaises(ValueError):
-            validate_course_count("0")
+        reader = CourseReader("test_courses.txt")
 
-    def test_invalid_negative_input(self):
-        with self.assertRaises(ValueError):
-            validate_course_count("-2")
+        self.assertEqual(
+            reader.get_available_course_numbers(),
+            ["CS120", "CS121", "CS222"]
+        )
 
 
 if __name__ == "__main__":
