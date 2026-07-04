@@ -2,12 +2,14 @@ class CourseReader:
     """Reads course data and provides available course numbers."""
 
     def __init__(self, filename):
+        # Store the input file name.
         self.filename = filename
 
     def load_courses(self):
         """Load course information from the course file."""
         courses = []
-
+        
+        # Read each course section from the file.
         with open(self.filename, "r") as file:
             for line in file:
                 parts = line.split()
