@@ -1,34 +1,82 @@
 # CS222_S26_P2_G4
-# Feature: Available Course Display (User Story 2)
 
-## Description
+# Course Scheduling System
 
-As a student,  
-I want to view all available course numbers,  
-So that I can decide which courses I want to register for.
+## Overview
+
+This project is a course scheduling system developed for CS222 Project 2.
+
+The program helps students build a semester schedule by allowing them to view available courses, enter the number of courses they want to register for, select course numbers, and generate a timetable. If a valid schedule cannot be created, the system should report the issue to the user.
+
+The project is implemented in Python using Test-Driven Development (TDD), Clean Code principles, and GitHub branching workflow.
 
 ---
 
-## Acceptance Criteria & Implementation Plan
+## Authors
 
-We will implement this feature following TDD principles.
+- Xuancen Liu
+- Qijun Ma
+- Haozhi Xue
 
-### 1. Display Offered Courses
+---
 
-- **Criteria:** The system displays all offered course numbers.
-- **TDD Target:** Test that all available course numbers are returned or displayed.
+## User Stories
 
-### 2. Display Before Course Selection
+The project is divided into multiple user stories. Each user story is developed on its own GitHub branch before being merged into the main branch.
 
-- **Criteria:** The list is shown before course selection begins.
-- **TDD Target:** Test that available courses can be retrieved before user course input.
+Current user stories include:
 
-### 3. Unique Course Numbers
+1. Course count input
+2. Available course display
+3. Course selection
+4. Timetable generation and conflict validation
 
-- **Criteria:** Each course number appears only once.
-- **TDD Target:** Test that duplicate course numbers are removed from the displayed list.
+Detailed descriptions for each user story will be added as the project develops.
 
-### 4. Review Before Selection
+---
 
-- **Criteria:** The user can review the list before entering course selections.
-- **TDD Target:** Test that the course list is accessible before selected courses are submitted.
+## Project Structure
+
+The repository contains the main program files and unit test files for each user story.
+
+Example files may include:
+
+- `course_reader.py`
+- `course_display.py`
+- `timetable.py`
+- `test_course_reader.py`
+- `test_course_display.py`
+- `test_of_timetable.py`
+- `README.md`
+
+---
+
+## Development Process
+
+This project follows:
+
+- Test-Driven Development (TDD)
+- Clean Code principles
+- GitHub branch workflow
+- Pull requests and code review
+- Team communication through Microsoft Teams
+
+Each feature should have related unit tests before being merged into the main branch.
+
+---
+
+## Running Tests
+
+Unit tests are written using Python's `unittest` framework.
+
+To run a test file, use:
+
+```
+python -m unittest test_file_name.py
+```
+
+For example:
+
+```
+python -m unittest test_course_display.py
+```
