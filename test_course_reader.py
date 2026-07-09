@@ -3,8 +3,8 @@ from course_reader import CourseReader
 
 
 class TestCourseReader(unittest.TestCase):
-    
-        def test_load_courses_returns_dictionary(self):
+
+    def test_load_courses_returns_dictionary(self):
         # Create a small test course file.
         with open("test_courses.txt", "w") as file:
             file.write("CS120 001 MWF 0900 0950\n")
@@ -19,7 +19,6 @@ class TestCourseReader(unittest.TestCase):
         self.assertEqual(courses["CS120"][0]["section"], "001")
 
     def test_get_available_course_numbers(self):
-
         # Create a small test course file.
         with open("test_courses.txt", "w") as file:
             file.write("CS120 001 MWF 0900 0950\n")
