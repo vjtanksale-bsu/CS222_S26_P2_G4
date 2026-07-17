@@ -1,0 +1,58 @@
+User Story 2 - Course Availability Validation
+
+Description
+
+As a student,
+I want to select only courses that are currently offered,
+So that the scheduling system can create a valid timetable.
+
+For Iteration 3, this user story focuses on validating the course number entered by the user. The system checks whether the entered course exists in the available course list. If the course is not offered, the system rejects the input before timetable generation begins.
+
+Acceptance Criteria
+
+1. The user can enter a course that exists in the available course list.
+2. The user cannot enter a course that is not offered.
+3. Course numbers are checked without case sensitivity.
+4. Extra spaces before or after the course number are removed.
+5. Empty or invalid course input is rejected.
+6. An unavailable course causes a ValueError.
+
+Implementation
+
+The CourseAvailabilityValidator class stores the available courses and validates user input through instance methods.
+
+The class includes the following methods:
+
+- normalize_course_number()
+  Cleans the entered course number by removing spaces and converting it to uppercase.
+
+- is_course_offered()
+  Returns True when the entered course exists in the available course list and False otherwise.
+
+- validate_course()
+  Returns the normalized course number when it is valid. It raises a ValueError when the course is not offered.
+
+Files Added
+
+- course_availability_validator.py
+- test_course_availability_validator.py
+- Description_User_Story_2_Iteration3.txt
+
+Testing
+
+The unit tests verify that:
+
+- An offered course is accepted.
+- An unavailable course is rejected.
+- Lowercase course input is accepted.
+- Empty input is rejected.
+- A valid course number is normalized and returned.
+- An unavailable course raises a ValueError.
+
+All six unit tests passed successfully.
+
+Rubric Connection
+
+This implementation supports the Iteration 3 requirement:
+
+User cannot enter a course that is not offered.
