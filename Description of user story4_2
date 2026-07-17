@@ -1,7 +1,0 @@
-User Story 4_2:
-As a student, I want to export my successfully generated timetable as a local PDF file so that I can download, share, or print my weekly schedule for offline access.
-Acceptance Criteria:
-1.The system provides a downloadable download link or automatically exports a formatted .pdf document upon successful schedule generation.
-2.The exported PDF document maintains a structured table layout displaying all confirmed course details including course names, timeslots, and professor names.
-3.The system gracefully blocks the export execution and triggers a data exception message if the schedule source array is completely empty or null.
-4.The system validates the local file system pathway and ensures that the newly created document contains non-empty binary contents exceeding 0 bytes.
