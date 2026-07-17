@@ -1,0 +1,44 @@
+Project 2 Description: User Story 1 and User Story 2
+
+User Story 1: Course Count Input
+
+Description
+
+As a student,
+I want to enter the number of courses I plan to register for,
+So that the scheduling system knows how many courses I need.
+
+This user story focuses on collecting the number of courses the student wants to register for. The system should ask the user for a course count and only accept a valid positive integer. If the user enters invalid input, such as text, zero, or a negative number, the system should reject the input and display an error message. After a valid number is entered, the system can continue to the course selection step.
+
+Acceptance Criteria
+
+1. The system asks the user how many courses they want to register for.
+2. The user can enter a positive integer.
+3. Invalid input is rejected with an error message.
+4. The system proceeds to course selection after a valid number is entered.
+
+Implementation Plan
+
+This feature should be implemented using Test-Driven Development and Clean Code principles. The course count logic should be separated from other parts of the program so that it can be tested independently. Unit tests should check valid input, invalid input, and the behavior after a valid number is accepted.
+
+
+User Story 2: Available Course Display
+
+Description
+
+As a student,
+I want to view all available course numbers,
+So that I can decide which courses I want to register for.
+
+This user story focuses on displaying the available course numbers to the student before course selection begins. The course data should already be stored in a dictionary structure, so this feature does not directly process the raw text file. The display logic should receive course data and show each available course number only once. This allows the student to review the available options before entering their course selections.
+
+Acceptance Criteria
+
+1. The system displays all offered course numbers.
+2. The list is shown before course selection begins.
+3. Each course number appears only once.
+4. The user can review the list before entering course selections.
+
+Implementation Plan
+
+This feature is implemented with a CourseDisplay class. The class receives course data as a dictionary and returns or prints the available course numbers. It does not use static methods and does not directly read from the raw text input file. Unit tests should verify that the course numbers are displayed correctly, duplicate course numbers are not repeated, and the display text can be shown before course selection.
